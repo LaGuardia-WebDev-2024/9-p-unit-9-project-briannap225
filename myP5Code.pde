@@ -12,11 +12,13 @@ draw = function(){
   fill(60, 0, 255);
   triangle(200, 104, 280, 280, 120, 280);
   fill(255, 255, 255);
-
-  {
+if(mousePressed){
+text("ask",random(0,600), random(0,400));
+}
+  
   fill(mouseX, mouseY,0)
-  ellipse(mouseX,mouseY,30,30)
-  };
+  ellipse(mouseX,mouseY,30,30);
+  
   
   if (answer == 1) {
   fill(255, 212, 252);
@@ -24,6 +26,7 @@ draw = function(){
   fill(255, 255, 255);
     text("Answer", 176, 200);
     text("Outlook is Good", 159, 229);  
+    drawFish(150, 300, color(255,212,252));
   }
    if (answer == 2) {
    fill(79, 238, 255);
@@ -31,6 +34,7 @@ draw = function(){
   fill(255, 255, 255);
     text("Answer", 176, 200);
     text("Most Likely Not", 159, 229); 
+    drawFish(150, 300, color(79,238,255));
 }
 if (answer == 3) {
 fill(253, 79, 102);
@@ -38,7 +42,7 @@ fill(253, 79, 102);
   fill(255, 255, 255);
     text("Answer", 176, 200);
     text("For Cetain", 159, 229); 
-    drawFish(150, 300, color(200,0,0));
+    drawFish(150, 300, color(253,79,102));
 
 }
 if (answer == 4) {
@@ -47,6 +51,7 @@ fill(111, 152, 108);
   fill(255, 255, 255);
     text("Answer", 176, 200);
     text("No", 159, 229); 
+    drawFish(150, 300, color(111,152,108));
     }
     if (answer == 5) {
 fill(239, 127, 255);
@@ -54,6 +59,7 @@ fill(239, 127, 255);
   fill(255, 255, 255);
     text("Answer", 176, 200);
     text("You may rely on it", 159, 229); 
+    drawFish(150, 300, color(239,127,255));
     }
     
 };
